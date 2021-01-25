@@ -15,6 +15,7 @@ class WeatherBloc extends Bloc<WeatherEvent, WeatherState> {
   Stream<WeatherState> mapEventToState(WeatherEvent event) async* {
     // TODO: implement mapEventToState
     if (event is GetWeather) {
+      print("Get Weather with city : " + event.cityName);
       yield WeatherLoading();
       final weather = await _fetchWeatherFromFakeApi(event.cityName);
       yield WeatherLoaded(weather);
