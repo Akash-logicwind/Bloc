@@ -7,8 +7,8 @@ class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: BlocBuilder(
-        bloc: BlocProvider.of<CounterBloc>(context),
+      body: BlocBuilder<CounterBloc, CounterState>(
+        // bloc: BlocProvider.of<CounterBloc>(context),
         //cubit: CounterBloc(),
         builder: (context, state) {
           return Center(

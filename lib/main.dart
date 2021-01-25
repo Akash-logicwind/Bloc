@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: BlocProvider(
-        create: (context) => CounterBloc(),
+        create: (context) => CounterBloc(CounterInitial(0)),
         child: MyHomePage(),
       ),
     );

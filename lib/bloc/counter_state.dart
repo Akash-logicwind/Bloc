@@ -6,3 +6,7 @@ class CounterState extends Equatable {
   @override
   List<Object> get props => [counter];
 }
+
+class CounterInitial extends CounterState {
+  CounterInitial(int counter) : super(counter: counter);
+}
