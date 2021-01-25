@@ -1,4 +1,5 @@
 import 'package:Bloc/bloc/counter_bloc.dart';
+import 'package:Bloc/my_homepage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -19,38 +20,6 @@ class MyApp extends StatelessWidget {
       home: BlocProvider(
         create: (context) => CounterBloc(),
         child: MyHomePage(),
-      ),
-    );
-  }
-}
-
-class MyHomePage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: BlocBuilder(
-        bloc: BlocProvider.of<CounterBloc>(context),
-        builder: (context, state) {
-          return Center(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                Text(
-                  'You have pushed the button this many times:',
-                ),
-                Text(
-                  '1',
-                  style: Theme.of(context).textTheme.headline4,
-                ),
-              ],
-            ),
-          );
-        },
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        tooltip: 'Increment',
-        child: Icon(Icons.add),
       ),
     );
   }
